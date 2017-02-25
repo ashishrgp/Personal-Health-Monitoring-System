@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_vital_signs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.dell_pc.health_first.vitalSigns">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "Cholesterol:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#2e8bb6"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/CholesterolID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:layout_marginTop="5dp"
+            android:ems="10" android:hint="Cholesterol" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Glucose:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#2e8bb6"
+            android:textAlignment="center" />
+
+        <EditText android:id="@+id/GlucoseID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:layout_marginTop="5dp"
+            android:ems="10" android:hint="Glucose" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heart Rate:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#2e8bb6"
+            android:layout_marginTop="5dp" />
+
+        <EditText android:id="@+id/HeartID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:ems="10" android:hint="Heart Rate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#2e8bb6"
+            android:layout_marginTop="5dp" />
+
+        <EditText android:id="@+id/BloodID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:ems="10" android:hint="Blood ID" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Body Temperature:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#2e8bb6"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:id="@+id/TempID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="numberDecimal"
+            android:digits="0123456789"
+            android:ems="10" android:hint="Body Temperature" />
+
+        <Button android:id="@+id/Submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Submit" />
+
+        <Button android:id="@+id/Back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:text="Back" />
+
+    </LinearLayout>
+
+</ScrollView>
+

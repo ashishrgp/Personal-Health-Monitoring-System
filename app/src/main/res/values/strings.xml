@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HealthManagementLogin</string>
+    <string name="hint_email">enter your email</string>
+    <string name="hint_password">enter password</string>
+    <string name="sign_in">sign in</string>
+    <string name="create_account">create account</string>
+    <string name="sign_out">sign out</string>
+    <string name="verify_email">Verify email</string>
+    <string name="signed_out">sign out</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+</resources>

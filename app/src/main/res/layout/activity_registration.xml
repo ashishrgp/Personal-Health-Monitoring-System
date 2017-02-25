@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dell_pc.health_first.Registration">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:maxLength="20"
+            android:hint="First Name"
+            android:layout_marginRight="69dp"
+            android:layout_marginEnd="69dp"
+            android:id="@+id/editTextfirstname"
+            android:width="100dp"
+            android:layout_alignBaseline="@+id/textViewfirstname"
+            android:layout_alignBottom="@+id/textViewfirstname"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="visible" />
+
+        <TextView
+            android:text="Last Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextfirstname"
+            android:layout_alignLeft="@+id/textViewfirstname"
+            android:layout_alignStart="@+id/textViewfirstname"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewlastname" />
+
+        <TextView
+            android:text="Phone Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewphone"
+            android:layout_below="@+id/textViewage"
+            android:layout_alignLeft="@+id/textViewage"
+            android:layout_alignStart="@+id/textViewage"
+            android:layout_marginTop="26dp" />
+
+        <TextView
+            android:text="Emergency contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:id="@+id/textViewemergency"
+            android:layout_below="@+id/textViewphone"
+            android:layout_alignLeft="@+id/textViewphone"
+            android:layout_alignStart="@+id/textViewphone" />
+
+        <TextView
+            android:text="First Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textViewfirstname"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Username/Email-id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewemergency"
+            android:layout_alignLeft="@+id/textViewemergency"
+            android:layout_alignStart="@+id/textViewemergency"
+            android:layout_marginTop="32dp"
+            android:id="@+id/textViewusername" />
+
+        <TextView
+            android:text="Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewusername"
+            android:layout_alignLeft="@+id/textViewusername"
+            android:layout_alignStart="@+id/textViewusername"
+            android:layout_marginTop="28dp"
+            android:id="@+id/textView18" />
+
+        <Button
+            android:text="Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/buttonsubmit"
+            android:layout_toRightOf="@+id/buttonsubmit"
+            android:layout_toEndOf="@+id/buttonsubmit"
+            android:layout_marginLeft="22dp"
+            android:layout_marginStart="22dp"
+            android:id="@+id/buttonback" />
+
+        <Button
+            android:text="Submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/buttonsubmit"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/textViewfirstname"
+            android:layout_toEndOf="@+id/textViewfirstname" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:hint="Username"
+            android:id="@+id/editTextusername"
+            android:width="100dp"
+            android:layout_alignBaseline="@+id/textViewusername"
+            android:layout_alignBottom="@+id/textViewusername"
+            android:layout_alignLeft="@+id/editTextphonenumber"
+            android:layout_alignStart="@+id/editTextphonenumber" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTextage"
+            android:width="100dp"
+            android:maxLength="3"
+            android:hint="Age"
+            android:layout_alignBaseline="@+id/textViewage"
+            android:layout_alignBottom="@+id/textViewage"
+            android:layout_alignLeft="@+id/editTextlastname"
+            android:layout_alignStart="@+id/editTextlastname" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:maxLength="20"
+            android:hint="Emergency contact"
+            android:id="@+id/editTextemergency"
+            android:width="100dp"
+            android:layout_alignBaseline="@+id/textViewemergency"
+            android:layout_alignBottom="@+id/textViewemergency"
+            android:layout_alignStart="@+id/editTextusername" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:hint="Password"
+            android:id="@+id/editTextpassword"
+            android:width="100dp"
+            android:layout_alignBaseline="@+id/textView18"
+            android:layout_alignBottom="@+id/textView18"
+            android:layout_alignStart="@+id/editTextusername" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:maxLength="10"
+            android:hint="Phone number"
+            android:id="@+id/editTextphonenumber"
+            android:width="100dp"
+            android:layout_above="@+id/textViewemergency"
+            android:layout_alignStart="@+id/editTextage" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:maxLength="20"
+            android:hint="Last Name"
+            android:id="@+id/editTextlastname"
+            android:width="100dp"
+            android:layout_alignBaseline="@+id/textViewlastname"
+            android:layout_alignBottom="@+id/textViewlastname"
+            android:layout_alignStart="@+id/editTextfirstname" />
+
+        <TextView
+            android:text="Age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:id="@+id/textViewage"
+            android:layout_below="@+id/textViewlastname"
+            android:layout_alignStart="@+id/textViewlastname" />
+        <![CDATA[
+        android:width="100dp"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_toRightOf="@+id/buttonsubmit"
+        android:layout_toEndOf="@+id/buttonsubmit" />
+        ]]>
+
+
+
+    </RelativeLayout>
+
+

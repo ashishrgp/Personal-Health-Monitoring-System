@@ -1,0 +1,226 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:id="@+id/activity_view_profile"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:paddingBottom="@dimen/activity_vertical_margin"
+     android:paddingLeft="@dimen/activity_horizontal_margin"
+     android:paddingRight="@dimen/activity_horizontal_margin"
+     android:paddingTop="@dimen/activity_vertical_margin"
+     tools:context="com.example.hamed.health.ViewProfileActivity">
+
+  <!-- <TextView
+       android:layout_width="wrap_content"
+       android:layout_height = "wrap_content"
+       android:text = "User Name:"
+       android:textAppearance="?android:attr/textAppearanceLarge"
+       android:textColor="#2e8bb6"
+       android:textAlignment="center"/>
+
+   <EditText
+       android:id="@+id/UserID"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:inputType="text"
+       android:layout_marginTop="5dp"
+       android:ems="10" android:hint="User Name" />-->
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="First Name:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:textAlignment="center"
+      android:id="@+id/TextFirstName"/>
+
+  <EditText android:id="@+id/FirstName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:inputType="textAutoComplete"
+      android:layout_marginTop="5dp"
+      android:ems="10" android:hint="First Name" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Last Name:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:textAlignment="center"
+      android:id="@+id/TextLastName"/>
+
+  <EditText android:id="@+id/LastName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:inputType="textAutoComplete"
+      android:layout_marginTop="5dp"
+      android:ems="10" android:hint="Last Name" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Phone number:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:textAlignment="center"
+      android:id="@+id/TextPhoneNumber"/>
+
+  <EditText android:id="@+id/PhoneNumber"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:inputType="number"
+      android:digits="0123456789"
+      android:layout_marginTop="5dp"
+      android:ems="10" android:hint="PhoneNumber" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Age:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:textAlignment="center"
+      android:id="@+id/TextAge"/>
+
+  <EditText android:id="@+id/AgeID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:inputType="number"
+      android:digits="0123456789"
+      android:layout_marginTop="5dp"
+      android:ems="10" android:hint="Age" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Gender:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:layout_marginTop="5dp"
+      android:id="@+id/TextGender"/>
+
+  <Spinner android:id="@+id/spinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:ems="10" android:hint="Gender"
+      android:layout_marginTop="5dp" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Weight:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:layout_below="@+id/TextGender"
+      android:layout_marginTop="5dp"
+      android:id="@+id/TextWeight"/>
+
+  <EditText android:id="@+id/WeightID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:inputType="numberDecimal"
+      android:digits="0123456789"
+      android:ems="10" android:hint="Weight" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Height:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:id="@+id/TextHight"
+      android:layout_marginTop="5dp" />
+
+  <EditText android:id="@+id/HightID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:inputType="numberDecimal"
+      android:digits="0123456789"
+      android:ems="10" android:hint="Height" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height = "wrap_content"
+      android:text = "Blood Group:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:textAlignment="center"/>
+
+  <EditText
+      android:id="@+id/BloodID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:inputType="text"
+      android:layout_marginTop="5dp"
+      android:ems="10" android:hint="Blood Group" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Doctor Information:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:layout_marginTop="5dp" />
+
+  <EditText
+      android:id="@+id/doctorNameID"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:inputType="textAutoComplete"
+      android:ems="10" android:hint="Doctor's name" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Emeregency Conatct Name:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:layout_marginTop="5dp" />
+
+  <EditText android:id="@+id/emergencyNameID"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:inputType="text"
+      android:ems="10" android:hint="Emeregency Conatct Name" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Emeregency Conatct Number:"
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:textColor="#2e8bb6"
+      android:layout_marginTop="5dp" />
+
+
+  <EditText android:id="@+id/emergencyNumberID"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:inputType="phone"
+      android:digits="0123456789"
+      android:ems="10" android:hint="Emeregency Conatct Number" />
+
+  <Button android:id="@+id/Submit"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="submitProfile"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="10dp"
+      android:text="Submit" />
+
+  <Button android:id="@+id/Back"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:layout_marginRight="10dp"
+      android:onClick="homepage"
+      android:text="Back" />
+ </LinearLayout>
+
+</ScrollView>

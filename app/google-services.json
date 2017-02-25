@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "877881729960",
+    "firebase_url": "https://healthmanagementuta.firebaseio.com",
+    "project_id": "healthmanagementuta",
+    "storage_bucket": "healthmanagementuta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877881729960:android:58a42572c45475b2",
+        "android_client_info": {
+          "package_name": "com.example.dell_pc.health_first"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877881729960-ad5tc3052jcbb4q327j3l3gm4ft0e8ar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dell_pc.health_first",
+            "certificate_hash": "9D53DF7FDCED977718469C52D9529F7919A5AF91"
+          }
+        },
+        {
+          "client_id": "877881729960-pl1qnsedn5rho7vcubkb7rqfc9u85i3s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD633f1W7ayV-xS_bVw9bP51u2la-DbBnY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877881729960-pl1qnsedn5rho7vcubkb7rqfc9u85i3s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
