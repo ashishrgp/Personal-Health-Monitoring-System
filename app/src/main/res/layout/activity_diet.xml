@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_diet2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/profile1bg"
+    tools:context="com.example.dell_pc.health_first.Diet">
+
+
+    <!--  <EditText
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="textPersonName"
+          android:text="FoodName"
+          android:ems="10"
+          android:layout_below="@+id/editTextcalorie"
+          android:layout_alignEnd="@+id/edit"
+          android:layout_marginTop="19dp"
+          android:id="@+id/fn" />
+      <EditText
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="textPersonName"
+          android:text="Cals"
+          android:ems="10"
+          android:layout_above="@+id/edit"
+          android:layout_alignStart="@+id/fn"
+          android:id="@+id/cal" />
+      <EditText
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:inputType="textPersonName"
+          android:text="servSize"
+          android:ems="10"
+          android:layout_below="@+id/edit"
+          android:layout_alignStart="@+id/cal"
+          android:id="@+id/servsize" />-->
+
+
+    <Button
+        android:text="EDIT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit"
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/button6back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="ADD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4add"
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/edit"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="BACK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6back"
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/textView03"
+            android:text=""
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/textView01"
+            android:text="Serving Size"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></TextView>
+    </TableRow>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:focusable = "true"
+        android:textColorHighlight = "#ff7eff15"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"        android:ems="10"
+        android:hint="Food Name"
+        android:id="@+id/editTextfoodname"
+        android:width="100dp"
+        android:layout_above="@+id/editTextservingsize"
+        android:layout_marginBottom="21dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:focusable = "true"
+        android:textColorHighlight = "#ff7eff15"
+        android:ems="10"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:hint="Calorie intake"
+        android:id="@+id/editTextcalorie"
+        android:width="100dp"
+        android:layout_marginBottom="39dp"
+        android:layout_above="@+id/tableRow1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:focusable = "true"
+        android:textColorHighlight = "#ff7eff15"
+        android:ems="10"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:hint="Serving Size"
+        android:id="@+id/editTextservingsize"
+        android:width="100dp"
+        android:layout_marginBottom="28dp"
+        android:layout_above="@+id/editTextcalorie"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/totalCal1"
+        android:text="Total Calories:"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/tableRow1"
+        android:layout_marginStart="23dp"></TextView>
+
+    <TextView
+        android:id="@+id/totalCal"
+        android:text="Total Calories"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textAlignment="center"
+
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/totalCal1"
+        android:layout_marginStart="15dp"></TextView>
+
+
+</RelativeLayout>

@@ -19,7 +19,7 @@ public class UserInformation {
     }
 
     public UserInformation(String firstName, String lastName,String age,Double phoneNumber,
-                           String username ,String password) {
+                           String username ) {
 
         this.firstName=firstName;
         this.lastName=lastName;
@@ -28,7 +28,7 @@ public class UserInformation {
         this.phoneNumber=phoneNumber;
         // this.emergencyContact=emergencyContact;
         this.username=username;
-        this.password=password;
+
 
     }
 
@@ -83,11 +83,5 @@ public class UserInformation {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
-    }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

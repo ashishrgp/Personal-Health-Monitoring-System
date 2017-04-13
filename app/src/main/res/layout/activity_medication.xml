@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_diet2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg1"
+    android:backgroundTint="@color/colorPrimaryDark"
+    tools:context="com.example.dell_pc.health_first.Diet"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/textView"
+        android:text="Medication "
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:textSize="40dp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/edit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:focusable = "true"
+            android:hint="Medication name"
+            android:id="@+id/editTextMedication"
+            android:textColorHighlight = "#ff7eff15"
+            android:textColor="#ffffff"
+            android:alpha="0.60"
+            android:ems="10"
+            android:layout_weight="0.04"
+            android:background="@drawable/rounded_edtxt"
+            android:textAlignment="center"
+            android:textColorHint = "#ffffff"
+            android:width="100dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="145dp"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:digits="0123456789"
+            android:focusable = "true"
+            android:hint="Frequency"
+            android:id="@+id/editTextFrequency"
+            android:textColorHighlight = "#ff7eff15"
+            android:textColor="#ffffff"
+            android:alpha="0.60"
+            android:ems="10"
+            android:background="@drawable/rounded_edtxt"
+            android:textAlignment="center"
+            android:textColorHint = "#ffffff"
+            android:width="100dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.85"
+            android:background="@drawable/rounded_button"
+            android:text="Start Date"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/edStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.04"
+            android:width="50dp"
+            android:alpha="0.60"
+            android:background="@drawable/rounded_edtxt"
+            android:digits="0123456789"
+            android:ems="10"
+            android:focusable="true"
+            android:hint="Start Date"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHighlight="#ff7eff15"
+            android:textColorHint="#ffffff" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:text="End Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buEndDate"
+            android:textColor="#ffffff"
+            android:alpha="0.85"
+            android:background="@drawable/rounded_button"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+
+        <EditText
+            android:id="@+id/edEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.04"
+            android:width="50dp"
+            android:alpha="0.60"
+            android:background="@drawable/rounded_edtxt"
+            android:ems="10"
+            android:focusable="true"
+            android:hint="End Date"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textColorHighlight="#ff7eff15"
+            android:textColorHint="#ffffff" />
+
+    </LinearLayout>
+    <Button
+        android:text="VIEW"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit1"
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:text="ADD"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:id="@+id/button1add"
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:text="BACK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2back"
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+    </TableRow>
+
+
+</LinearLayout>
+

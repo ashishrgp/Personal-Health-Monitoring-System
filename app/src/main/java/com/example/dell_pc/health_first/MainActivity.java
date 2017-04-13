@@ -1,10 +1,14 @@
 package com.example.dell_pc.health_first;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
@@ -20,10 +24,15 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends Activity {
-    Button b1,b2,b3;
+public class MainActivity extends AppCompatActivity {
+    Button b3,b2;
     EditText ed1,ed2;
+    TextView tv;
+    public static final String MyPREFERENCES = "MyPrefs" ;
+    public static final String email = "emailKey";
+    public static final String password = "passkey";
     private static final String TAG = "EmailPassword";
+    SharedPreferences sharedpreferences;
     TextView tx1;
     int counter = 3;
     // [START declare_auth]
@@ -40,11 +49,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        b1 = (Button)findViewById(R.id.button);
-        b2 = (Button)findViewById(R.id.button1);
-        b3 =(Button)findViewById(R.id.button3);
+
+        b3 = (Button)findViewById(R.id.button);
+        b2 = (Button)findViewById(R.id.button3);
+        tv=(TextView)findViewById(R.id.textview);
+
         ed1 = (EditText)findViewById(R.id.editText);
         ed2 = (EditText)findViewById(R.id.editText2);
+
+        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
@@ -69,15 +82,22 @@ public class MainActivity extends Activity {
         };
 
 
-        b1.setOnClickListener(new View.OnClickListener() {
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signIn(ed1.getText().toString(),ed2.getText().toString());
+                String e  = ed1.getText().toString();
+                String p = ed2.getText().toString();
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putString(email, e);
+                editor.putString(password, p);
+                editor.apply();
+                editor.commit();
 
             }
         });
 
-        b2.setOnClickListener(new View.OnClickListener(){
+        tv.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v)
             {
@@ -89,8 +109,7 @@ public class MainActivity extends Activity {
 
 
 
-
-       b3.setOnClickListener(new View.OnClickListener(){
+        b2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent in=new Intent(MainActivity.this,Registration1.class);
@@ -103,7 +122,8 @@ public class MainActivity extends Activity {
 
     }
 
-    private void signIn(String email, String password) {
+    private void signIn(final String email, String password) {
+
       /*  Log.d(TAG, "signIn:" + email);
         if (!validateForm()) {
             return;
@@ -119,6 +139,7 @@ public class MainActivity extends Activity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
+
 
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the

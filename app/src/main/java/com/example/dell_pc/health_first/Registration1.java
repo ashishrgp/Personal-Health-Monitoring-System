@@ -28,7 +28,7 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
     private EditText meditTextlastname;
     private EditText meditTextage;
     private EditText meditTextphonenumber;
-    //private EditText meditTextemergency;
+    private EditText meditTextemergency;
     private EditText muserNameField;
     private EditText mPasswordField;
     private static final String TAG = "EmailPassword";
@@ -54,7 +54,7 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
         meditTextlastname = (EditText) findViewById(R.id.editTextlastname);
         meditTextage = (EditText) findViewById(R.id.editTextage);
         meditTextphonenumber = (EditText) findViewById(R.id.editTextphonenumber);
-        // meditTextemergency = (EditText) findViewById(R.id.editTextemergency);
+        meditTextemergency = (EditText) findViewById(R.id.editTextemergency);
         muserNameField = (EditText) findViewById(R.id.editTextusername);
         mPasswordField = (EditText) findViewById(R.id.editTextpassword);
 
@@ -88,7 +88,10 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
             }
         };
 
+
     }
+
+
     // [START on_start_add_listener]
     @Override
     public void onStart() {
@@ -181,7 +184,7 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
                             meditTextlastname = (EditText) findViewById(R.id.editTextlastname);
                             meditTextage = (EditText) findViewById(R.id.editTextage);
                             meditTextphonenumber = (EditText) findViewById(R.id.editTextphonenumber);
-                            //        meditTextemergency = (EditText) findViewById(R.id.editTextemergency);
+                            meditTextemergency = (EditText) findViewById(R.id.editTextemergency);
                             muserNameField = (EditText) findViewById(R.id.editTextusername);
                             mPasswordField = (EditText) findViewById(R.id.editTextpassword);
                             Toast.makeText(getApplicationContext(),
@@ -191,13 +194,13 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
                                             +"\n lastName is"+meditTextlastname.getText().toString()
                                             +"\n age is "+ meditTextage.getText().toString()
                                             +"\n phone number"+Double.parseDouble(meditTextphonenumber.getText().toString()),
-                                    //  +"\n emergency "+meditTextemergency.getText().toString()+"\n ",
+                                           // +"\n emergency "+meditTextemergency.getText().toString()+"\n ",
 
                                     Toast.LENGTH_LONG).show();
 
                             saveUserInformation(meditTextfirstname.getText().toString(),meditTextlastname.getText().toString(),meditTextage.getText().toString(),
                                     Double.parseDouble(meditTextphonenumber.getText().toString())
-                                    ,muserNameField.getText().toString(),mPasswordField.getText().toString());
+                                    ,muserNameField.getText().toString());
 
 
                         }
@@ -206,21 +209,25 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
                     }
                 });
 
+
+
+
+
     }
 
 
 
 
 
-    void saveUserInformation(String firstName, String lastName,String age,double phoneNumber,
-                             String username ,String password) {
+    void saveUserInformation(String firstName, String lastName,String age,double phoneNumber
+                             ,String username) {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         if (user != null) {
 
             String uid = user.getUid();
-            UserInformation userInformation = new UserInformation(firstName,lastName,age,phoneNumber,username,password);
+            UserInformation userInformation = new UserInformation(firstName,lastName,age,phoneNumber,username);
 
 
             databaseReference.child(uid).setValue(userInformation);
@@ -266,7 +273,7 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
         String lname= meditTextlastname.getText().toString();
         String age= meditTextage.getText().toString();
         String phone= meditTextphonenumber.getText().toString();
-        //String emergency=meditTextemergency.getText().toString();
+//        String emergency=meditTextemergency.getText().toString();
         boolean valid =true;
         int id=v.getId();
         if(id==R.id.buttonsubmit)
@@ -327,6 +334,8 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
                         Toast.LENGTH_SHORT).show();
                 valid=false;
             }
+
+
             if(meditTextlastname.getText().toString().length()!=0 && valid){
 
                 // createAccount(muserNameField.getText().toString(),mPasswordField.getText().toString());
@@ -367,9 +376,9 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
             {
                 createAccount(muserNameField.getText().toString(),mPasswordField.getText().toString());
                 Toast.makeText(getApplicationContext(), "Redirecting...",
-                         Toast.LENGTH_SHORT).show();
-                  Intent in=new Intent(Registration1.this,MainActivity.class);
-                  startActivity(in);
+                        Toast.LENGTH_SHORT).show();
+                Intent in=new Intent(Registration1.this,MainActivity.class);
+                startActivity(in);
             }
 
 
@@ -381,8 +390,7 @@ public class Registration1 extends AppCompatActivity implements View.OnClickList
 
         }
         if(id==R.id.buttonback){
-            Toast.makeText(getApplicationContext(), "Registered...",
-                    Toast.LENGTH_SHORT).show();
+
             Intent in=new Intent(Registration1.this,MainActivity.class);
             startActivity(in);
 

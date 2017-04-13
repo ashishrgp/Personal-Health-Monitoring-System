@@ -18,13 +18,41 @@
             </intent-filter>
         </activity>
         <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".Monitoring"/>
+        <activity android:name=".Reminder1"/>
+        <activity android:name=".Diet" />
+        <activity android:name=".Medication"/>
+        <activity android:name=".medicationTable"/>
+        <activity android:name=".DietTable" />
+        <activity android:name=".docsearch"/>
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".HomeActivity" />
+        <activity android:name=".SearchService"/>
         <activity android:name=".ViewProfileActivity" />
         <activity android:name=".UpdateProfileActivity" />
         <activity android:name=".Registration" />
+        <activity android:name=".NoteActivity"/>
+        <activity android:name=".notepad"/>
         <activity android:name=".vitalSigns" />
-        <activity android:name=".Registration1"></activity>
+        <activity android:name=".search"/>
+        <activity android:name=".DoctorDetailActivity"/>
+        <activity android:name=".Registration1" />
+        <activity android:name=".DoctorListActivity"/>
+        <activity android:name=".SavedDoctorListActivity"/>
+        <activity android:name=".FindDoctorActivity"/>
+        <activity android:name=".CholInfoActivity"/>
+        <activity android:name=".SugarInfoActivity"/>
+        <activity android:name=".searchfood"/>
+        <activity android:name=".VitalsInfoActivity"/>
+        <activity android:name=".PresInfoActivity"/>
+        <activity android:name=".Alarm">
+        </activity>
+        <receiver android:name=".AlarmReciever" />
+
+        <service
+            android:name=".RingtonePlayingService"
+            android:enabled="true" />
+
     </application>
 
 </manifest>

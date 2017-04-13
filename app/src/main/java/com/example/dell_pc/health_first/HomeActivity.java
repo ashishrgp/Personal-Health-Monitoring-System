@@ -1,26 +1,28 @@
 package com.example.dell_pc.health_first;
 
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.PopupMenu;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class HomeActivity extends Activity {
-    Button b1;
+public class HomeActivity extends AppCompatActivity{
+    //private DrawerLayout mDrawerLayout;
+    //private ActionBarDrawerToggle mToggle;
+    Button b1, b2, b3, b4, b5, b6;
+
+
+
     private static final String TAG = "EmailPassword";
 
     // [START declare_auth]
@@ -35,6 +37,13 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        b1 = (Button) findViewById(R.id.activity_view_profile);
+        b2 = (Button) findViewById(R.id.buttonvitals);
+        b3 = (Button) findViewById(R.id.buttondiet);
+        b4 = (Button) findViewById(R.id.buttonmedication);
+        b5 = (Button) findViewById(R.id.buttonnotepad);
+        b6 = (Button) findViewById(R.id.buttonsearch);
+
 
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
@@ -55,51 +64,133 @@ public class HomeActivity extends Activity {
                 // [START_EXCLUDE]
                 //  updateUI(user);
                 // [END_EXCLUDE]
+
             }
         };
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        b1 = (Button)findViewById(R.id.button);
+                Intent in = new Intent(HomeActivity.this, ViewProfileActivity.class);
+                startActivity(in);
 
-       b1.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               PopupMenu popupMenu=new PopupMenu(getApplicationContext(),v);
-
-              // MenuInflater menuInflater=popupMenu.getMenuInflater();
-               popupMenu.inflate(R.menu.activity_popupmenu);
-               popupMenu.show();
-
-               popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                   @Override
-                   public boolean onMenuItemClick(MenuItem item) {
-                       Toast.makeText(getApplicationContext(),item.toString(),Toast.LENGTH_SHORT).show();
-                       if(item.toString().equals("Profile")){
-                           Intent in=new Intent(HomeActivity.this,ViewProfileActivity.class);
-                           startActivity(in);
-
-                       }
-                       if(item.toString().equals("Vital Signs")){
-                           Intent in=new Intent(HomeActivity.this,vitalSigns.class);
+            }
+        });
+                b2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent in = new Intent(HomeActivity.this, vitalSigns.class);
+                        startActivity(in);
+                    }
+                });
+                b3.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                            Intent in = new Intent(HomeActivity.this, Diet.class);
                             startActivity(in);
 
-                       }
-                       if(item.toString().equals("Logout")){
+                    }
+                });
+                b4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                            Intent in = new Intent(HomeActivity.this, Medication.class);
+                            startActivity(in);
+
+                    }
+                });
+                b5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                            Intent in = new Intent(HomeActivity.this, Monitoring.class);
+                            startActivity(in);
+
+                    }
+                });
+        b6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent in = new Intent(HomeActivity.this, search.class);
+                startActivity(in);
+
+            }
+        });
+
+            }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_popupmenu, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.logout:
+                Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT)
+                        .show();
+                mAuth.signOut();
+                Intent in = new Intent(HomeActivity.this, MainActivity.class);
+                startActivity(in);
+
+
+
+                break;
+            default:
+                break;
+        }
+
+        return true;
+    }
+
+        }
+
+
+      /*  mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+        //       and use variable actionBar instead
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
+
+  //      getSupportActionBar().setHomeButtonEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        b2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent in=new Intent(HomeActivity.this,vitalSigns.class);
+                startActivity(in);
+            }
+
+        });
+          }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem Item) {
+        if (mToggle.onOptionsItemSelected(Item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(Item);
+
+    }
+
+*/
+
+
+
 
                           /* Intent in=new Intent(HomeActivity.this,ViewProfileActivity.class);
                            startActivity(in);*/
 
-                           mAuth.signOut();
-                           Intent in=new Intent(HomeActivity.this,MainActivity.class);
-                           startActivity(in);
-
-                       }
-                       return true;
-                   }
-               });
-           }
-       });
 
 
 
-    }
-}
+
+

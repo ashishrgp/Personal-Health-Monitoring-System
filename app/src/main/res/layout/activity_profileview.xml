@@ -13,7 +13,9 @@
      android:paddingLeft="@dimen/activity_horizontal_margin"
      android:paddingRight="@dimen/activity_horizontal_margin"
      android:paddingTop="@dimen/activity_vertical_margin"
-     tools:context="com.example.hamed.health.ViewProfileActivity">
+     android:background="@drawable/updatbg"
+     tools:context="com.example.hamed.health.ViewProfileActivity"
+     android:weightSum="1">
 
   <!-- <TextView
        android:layout_width="wrap_content"
@@ -33,183 +35,270 @@
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="First Name:"
+      android:text="First Name"
+
+      android:textColor="#ffffff"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
-      android:textAlignment="center"
+
       android:id="@+id/TextFirstName"/>
 
   <EditText android:id="@+id/FirstName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
       android:inputType="textAutoComplete"
-      android:layout_marginTop="5dp"
-      android:ems="10" android:hint="First Name" />
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
+      android:ems="10" android:hint="First Name"
+      android:layout_weight="0.04" />
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Last Name:"
+      android:textColor="#ffffff"
+
+      android:text="Last Name"
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
-      android:textAlignment="center"
+
       android:id="@+id/TextLastName"/>
 
   <EditText android:id="@+id/LastName"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
       android:inputType="textAutoComplete"
-      android:layout_marginTop="5dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
       android:ems="10" android:hint="Last Name" />
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Phone number:"
+      android:text="Phone number"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
-      android:textAlignment="center"
       android:id="@+id/TextPhoneNumber"/>
 
   <EditText android:id="@+id/PhoneNumber"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
       android:inputType="number"
       android:digits="0123456789"
-      android:layout_marginTop="5dp"
-      android:ems="10" android:hint="PhoneNumber" />
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
+      android:ems="10" android:hint="Phone Number" />
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Age:"
+      android:text="Age"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
-      android:textAlignment="center"
       android:id="@+id/TextAge"/>
 
   <EditText android:id="@+id/AgeID"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
       android:inputType="number"
       android:digits="0123456789"
-      android:layout_marginTop="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
       android:ems="10" android:hint="Age" />
 
   <TextView
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Gender:"
+      android:text="Gender"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
       android:layout_marginTop="5dp"
       android:id="@+id/TextGender"/>
 
   <Spinner android:id="@+id/spinner"
-      android:layout_width="wrap_content"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:textAlignment="center"
+      android:layout_gravity="center"
       android:ems="10" android:hint="Gender"
       android:layout_marginTop="5dp" />
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Weight:"
+      android:text="Weight"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
       android:layout_below="@+id/TextGender"
       android:layout_marginTop="5dp"
       android:id="@+id/TextWeight"/>
 
   <EditText android:id="@+id/WeightID"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
       android:inputType="numberDecimal"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
       android:digits="0123456789"
       android:ems="10" android:hint="Weight" />
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Height:"
+      android:text="Height"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
       android:id="@+id/TextHight"
       android:layout_marginTop="5dp" />
 
   <EditText android:id="@+id/HightID"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
       android:inputType="numberDecimal"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
       android:digits="0123456789"
       android:ems="10" android:hint="Height" />
   <TextView
       android:layout_width="wrap_content"
       android:layout_height = "wrap_content"
-      android:text = "Blood Group:"
+      android:text = "Blood Group"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
-      android:textAlignment="center"/>
+     />
 
   <EditText
       android:id="@+id/BloodID"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
       android:inputType="text"
-      android:layout_marginTop="5dp"
       android:ems="10" android:hint="Blood Group" />
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Doctor Information:"
+      android:text="Doctor Information"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
       android:layout_marginTop="5dp" />
 
   <EditText
       android:id="@+id/doctorNameID"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
       android:inputType="textAutoComplete"
       android:ems="10" android:hint="Doctor's name" />
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Emeregency Conatct Name:"
+      android:text="Emergency Contact Name"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
       android:layout_marginTop="5dp" />
 
   <EditText android:id="@+id/emergencyNameID"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
       android:inputType="text"
-      android:ems="10" android:hint="Emeregency Conatct Name" />
+      android:ems="10" android:hint="Emeregency Contact Name" />
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Emeregency Conatct Number:"
+      android:text="Emergency Contact Number"
+      android:textAlignment="center"
+      android:layout_gravity="center"
+      android:textColor="#ffffff"
+
       android:textAppearance="?android:attr/textAppearanceLarge"
-      android:textColor="#2e8bb6"
       android:layout_marginTop="5dp" />
 
 
   <EditText android:id="@+id/emergencyNumberID"
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
       android:inputType="phone"
       android:digits="0123456789"
-      android:ems="10" android:hint="Emeregency Conatct Number" />
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:focusable = "true"
+      android:textColorHighlight = "#ff7eff15"
+      android:textColor="#ffffff"
+      android:alpha="0.60"
+      android:background="@drawable/rounded_edtxt"
+      android:textAlignment="center"
+      android:textColorHint = "#ffffff"
+      android:layout_marginTop="10dp"
+      android:ems="10" android:hint="Emergency Contact Number" />
 
   <Button android:id="@+id/Submit"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:onClick="submitProfile"
+      android:textColor="#ffffff"
+      android:alpha="0.85"
+      android:background="@drawable/rounded_button"
       android:layout_marginRight="10dp"
       android:layout_marginTop="10dp"
       android:text="Submit" />
@@ -219,6 +308,12 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="5dp"
       android:layout_marginRight="10dp"
+      android:textColor="#ffffff"
+      android:alpha="0.85"
+      android:background="@drawable/rounded_button"
+      android:layout_alignParentStart="true"
+      android:layout_marginBottom="22dp"
+      android:layout_alignParentEnd="true"
       android:onClick="homepage"
       android:text="Back" />
  </LinearLayout>

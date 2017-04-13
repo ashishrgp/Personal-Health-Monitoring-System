@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/chol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Cholestrol Chart"
+        android:background="@drawable/rounded_button"
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:layout_above="@+id/sugar"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="34dp" />
+
+    <Button
+        android:id="@+id/sugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+        android:text="View Blood Sugar Chart"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="38dp"
+        android:layout_above="@+id/pres"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/pres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+        android:text="View Blood Pressure Chart"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="207dp" />
+</RelativeLayout>

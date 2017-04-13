@@ -1,9 +1,5 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/activity_vital_signs"
         android:layout_width="match_parent"
@@ -13,106 +9,286 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/profilebg"
         tools:context="com.example.dell_pc.health_first.vitalSigns">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height = "wrap_content"
-            android:text = "Cholesterol:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#2e8bb6"
-            android:textAlignment="center"/>
+    <Button android:id="@+id/Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="Back"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
 
-        <EditText
-            android:id="@+id/CholesterolID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:digits="0123456789"
-            android:layout_marginTop="5dp"
-            android:ems="10" android:hint="Cholesterol" />
+        android:background="@drawable/rounded_button"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Glucose:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#2e8bb6"
-            android:textAlignment="center" />
+    <Button android:id="@+id/Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="Submit"
+        android:layout_above="@+id/Back"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
 
-        <EditText android:id="@+id/GlucoseID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:digits="0123456789"
-            android:layout_marginTop="5dp"
-            android:ems="10" android:hint="Glucose" />
+        android:background="@drawable/rounded_button"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Heart Rate:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#2e8bb6"
-            android:layout_marginTop="5dp" />
+    <EditText android:id="@+id/BloodID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:ems="10"
+        android:hint="Blood Type"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_below="@+id/TempID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentEnd="true" />
 
-        <EditText android:id="@+id/HeartID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:inputType="numberDecimal"
-            android:digits="0123456789"
-            android:ems="10" android:hint="Heart Rate" />
+    <EditText android:id="@+id/GlucoseID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:ems="10"
+        android:hint="Blood Glucose(mmol/L)"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:alpha="0.70"
+        android:textColorHint = "#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_below="@+id/BloodID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentEnd="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Blood Pressure:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#2e8bb6"
-            android:layout_marginTop="5dp" />
+    <EditText
+        android:id="@+id/CholesterolID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:ems="10"
+        android:alpha="0.70"
+        android:hint="Cholesterol(mg/dL)"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:textColorHint = "#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
-        <EditText android:id="@+id/BloodID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:inputType="numberDecimal"
-            android:digits="0123456789"
-            android:ems="10" android:hint="Blood ID" />
+    <EditText android:id="@+id/HeartID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:ems="10"
+        android:alpha="0.70"
+        android:hint="Heart Rate(BPM)"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:textColorHint = "#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_below="@+id/CholesterolID"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp"
+        android:layout_alignParentEnd="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Body Temperature:"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#2e8bb6"
-            android:layout_marginTop="5dp" />
+    <EditText
+        android:id="@+id/TempID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:ems="10"
+        android:hint="Body Temperature(degree)"
+        android:alpha="0.70"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:textColorHint = "#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
-        <EditText
-            android:id="@+id/TempID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:inputType="numberDecimal"
-            android:digits="0123456789"
-            android:ems="10" android:hint="Body Temperature" />
+</RelativeLayout>
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-        <Button android:id="@+id/Submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:text="Submit" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_vital_signs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/profile1bg"
+    tools:context="com.example.dell_pc.health_first.vitalSigns"
+    android:weightSum="1">
 
-        <Button android:id="@+id/Back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="10dp"
-            android:text="Back" />
 
-    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height = "match_parent"
+        android:text = "Cholesterol(mg/dL):"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+
+        />
+
+    <EditText
+        android:id="@+id/CholesterolID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:fontFamily="sans-serif-smallcaps"
+        android:ems="10" android:hint="Cholesterol"
+        android:layout_weight="0.05" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Glucose(mmol/L):"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        />
+
+    <EditText android:id="@+id/GlucoseID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_weight="0.05"
+        android:ems="10" android:hint="Glucose" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Heart Rate(BPM):"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp" />
+
+    <EditText android:id="@+id/HeartID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:ems="10"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-smallcaps"
+
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:layout_weight="0.05"
+        android:hint="Heart Rate" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Blood Pressure(mmHg):"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp" />
+
+    <EditText android:id="@+id/BloodID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:fontFamily="sans-serif-smallcaps"
+
+        android:layout_weight="0.05"
+        android:ems="10" android:hint="Blood ID" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body Temperature(degrees):"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:id="@+id/TempID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:inputType="numberDecimal"
+        android:digits="0123456789"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-smallcaps"
+
+        android:textColor="#ffffff"
+        android:textColorHint = "#ffffff"
+        android:alpha="0.70"
+        android:layout_weight="0.05"
+        android:ems="10" android:hint="Body Temperature" />
+
+    <Button android:id="@+id/Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="Back"
+
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_button"/>
+
+    <Button android:id="@+id/Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+
+        android:text="Submit"
+        android:layout_above="@+id/Back"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-smallcaps"
+
+        android:background="@drawable/rounded_button"/>
+
+</LinearLayout>
 
 </ScrollView>
-

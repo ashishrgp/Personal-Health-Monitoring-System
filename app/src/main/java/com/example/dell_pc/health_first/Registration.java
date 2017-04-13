@@ -294,7 +294,7 @@ public class Registration extends Activity {
     private void saveUserInformation(String firstName, String lastName,String emailId,String age,double phoneNumber,String emergencyContact,
                                      String username ,String password) {
 
-        UserInformation userInformation = new UserInformation(firstName,lastName,age,phoneNumber,username,password);
+        UserInformation userInformation = new UserInformation(firstName,lastName,age,phoneNumber,username);
 
 
         //databaseReference.child(emailId).setValue(userInformation);

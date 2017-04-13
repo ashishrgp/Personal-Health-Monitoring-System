@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dell_pc.health_first.NoteActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="15pt"
+        android:inputType="textPersonName"
+        android:focusable = "true"
+        android:textColorHighlight = "#ff7eff15"
+
+
+        android:hint="Title"
+        android:id="@+id/title"
+        android:width="100dp"
+        android:alpha="0.40"
+        android:textColorHint = "#ffffff"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        tools:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="43dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70pt"
+        android:inputType="textPersonName"
+        android:focusable = "true"
+        android:textColorHighlight = "#ff7eff15"
+        android:alpha="0.40"
+        android:hint="Content"
+        android:id="@+id/content"
+        android:width="100dp"
+        android:textColorHint = "#ffffff"
+        android:background="@drawable/rounded_edtxt"
+        android:textAlignment="center"
+        tools:fontFamily="sans-serif-smallcaps"
+        android:textColor="#ffffff"
+        android:ems="10"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/button_back"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85"
+        android:textColor="#ffffff"
+        android:background="@drawable/rounded_button"
+        android:id="@+id/button_back"
+        android:layout_above="@+id/button_save_note"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="42dp" />
+
+    <Button
+        android:id="@+id/button_save_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Save"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -8,96 +8,45 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/registrationbg"
     tools:context="com.example.dell_pc.health_first.Registration1">
 
+
     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         android:text="Submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
         android:id="@+id/buttonsubmit"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textViewfirstname"
-        android:layout_toEndOf="@+id/textViewfirstname" />
+        android:textColor="#ffffff"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:focusable = "true"
-        android:textColorHighlight = "#ff7eff15"
-        android:textColorHint = "#ffff25e6"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:maxLength="10"
-        android:hint="Phone number"
-        android:id="@+id/editTextphonenumber"
-        android:width="100dp"
-        android:layout_below="@+id/editTextlastname"
+        android:layout_above="@+id/buttonback"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:focusable = "true"
-        android:textColorHighlight = "#ff7eff15"
-        android:textColorHint = "#ffff25e6"
-        android:ems="10"
-        android:hint="Username"
-        android:id="@+id/editTextusername"
-        android:width="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="63dp"
-        android:layout_alignParentEnd="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:focusable = "true"
-        android:textColorHighlight = "#ff7eff15"
-        android:textColorHint = "#ffff25e6"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:maxLength="20"
-        android:hint="Last Name"
-        android:id="@+id/editTextlastname"
-        android:width="100dp"
-        android:layout_below="@+id/editTextfirstname"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
-        android:id="@+id/buttonback"
-        android:layout_alignBaseline="@+id/buttonsubmit"
-        android:layout_alignBottom="@+id/buttonsubmit"
-        android:layout_alignParentEnd="true" />
-
-    <TextView android:text = "Register Here" android:layout_width="wrap_content"
-        android:layout_height = "wrap_content"
-        android:id = "@+id/textview"
-        android:textSize = "30dp"
-        android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/buttonsubmit" />
-
-    <EditText
-        android:layout_width="wrap_content"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:drawableLeft="@drawable/regicon"
         android:hint="Password"
+        android:textColor="#ffffff"
+        android:alpha="0.60"
+        android:background="@drawable/rounded_edtxt"
+        tools:fontFamily="sans-serif-smallcaps"
         android:id="@+id/editTextpassword"
         android:width="100dp"
         android:focusable = "true"
         android:textColorHighlight = "#ff7eff15"
-        android:textColorHint = "#ffff25e6"
+        android:textColorHint = "#ffffff"
         android:layout_below="@+id/editTextusername"
         android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
         android:layout_alignParentEnd="true" />
 
     <EditText
@@ -105,14 +54,43 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:focusable = "true"
+        android:textAlignment="center"
         android:textColorHighlight = "#ff7eff15"
-        android:textColorHint = "#ffff25e6"
+        android:textColorHint = "#ffffff"
         android:ems="10"
+        android:drawableLeft="@drawable/regicon"
         android:id="@+id/editTextage"
         android:width="100dp"
+        android:textColor="#ffffff"
+        android:alpha="0.60"
+        android:background="@drawable/rounded_edtxt"
+        tools:fontFamily="sans-serif-smallcaps"
         android:maxLength="3"
         android:hint="Age"
         android:layout_below="@+id/editTextpassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:focusable = "true"
+        android:textColorHighlight = "#ff7eff15"
+        android:textColorHint = "#ffffff"
+        android:ems="10"
+        android:drawableLeft="@drawable/regicon"
+        android:textColor="#ffffff"
+        android:alpha="0.60"
+        android:background="@drawable/rounded_edtxt"
+        tools:fontFamily="sans-serif-smallcaps"
+        android:hint="Username"
+        android:id="@+id/editTextusername"
+        android:width="100dp"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -121,18 +99,82 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-
+        android:textAlignment="center"
         android:focusable = "true"
         android:textColorHighlight = "#ff7eff15"
-        android:textColorHint = "#ffff25e6"
+        android:textColorHint = "#ffffff"
         android:hint="First Name"
-
+        android:textColor="#ffffff"
+        android:alpha="0.60"
+        android:background="@drawable/rounded_edtxt"
+        tools:fontFamily="sans-serif-smallcaps"
+        android:drawableLeft="@drawable/regicon"
         android:id="@+id/editTextfirstname"
         android:width="100dp"
         android:visibility="visible"
         android:layout_below="@+id/editTextage"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+
+        android:focusable = "true"
+        android:textColor="#ffffff"
+        android:alpha="0.60"
+        android:background="@drawable/rounded_edtxt"
+        tools:fontFamily="sans-serif-smallcaps"
+        android:textColorHighlight = "#ff7eff15"
+        android:textColorHint = "#ffffff"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:maxLength="20"
+        android:hint="Last Name"
+        android:id="@+id/editTextlastname"
+        android:width="100dp"
+        android:drawableLeft="@drawable/regicon"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/editTextfirstname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="Back"
+        android:id="@+id/buttonback"
+        android:alpha="0.85"
+        android:background="@drawable/rounded_button"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable = "true"
+        android:drawableLeft="@drawable/regicon"
+        android:textColorHighlight = "#ff7eff15"
+        android:textColor="#ffffff"
+        android:alpha="0.60"
+        android:background="@drawable/rounded_edtxt"
+        tools:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        android:textColorHint = "#ffffff"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:maxLength="10"
+        android:hint="Phone number"
+        android:id="@+id/editTextphonenumber"
+        android:width="100dp"
+        android:layout_below="@+id/editTextlastname"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentEnd="true" />
 
 
     <![CDATA[

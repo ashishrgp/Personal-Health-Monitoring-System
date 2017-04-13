@@ -15,11 +15,19 @@
       },
       "oauth_client": [
         {
+          "client_id": "877881729960-n6nhq3vm30nuncoh08le01ble23uv1is.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dell_pc.health_first",
+            "certificate_hash": "9b75d6728eef040a1744fca3d38e51ddb1b235df"
+          }
+        },
+        {
           "client_id": "877881729960-ad5tc3052jcbb4q327j3l3gm4ft0e8ar.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.dell_pc.health_first",
-            "certificate_hash": "9D53DF7FDCED977718469C52D9529F7919A5AF91"
+            "certificate_hash": "9d53df7fdced977718469c52d9529f7919a5af91"
           }
         },
         {

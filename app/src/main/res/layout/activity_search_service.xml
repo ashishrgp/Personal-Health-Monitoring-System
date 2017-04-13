@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_diet2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/seachservbg"
+    tools:context="com.example.dell_pc.health_first.SearchService">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+
+            <EditText
+                android:id="@+id/searchMed"
+                android:layout_width="wrap_content"
+                android:layout_height="20pt"
+                android:ems="15"
+                android:inputType="textPersonName"
+                android:hint="Medicine Name"
+                tools:layout_editor_absoluteX="16dp"
+                android:background="@drawable/rounded_edtxt"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textColorHint = "#ffffff"
+                android:alpha="0.70"
+                android:fontFamily="sans-serif-smallcaps"
+                tools:layout_editor_absoluteY="27dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/MedSearchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="20pt"
+                android:text="Search"
+                tools:layout_editor_absoluteX="168dp"
+                tools:layout_editor_absoluteY="116dp"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/rounded_button"
+                android:textColor="#ffffff"
+                android:alpha="0.85"
+                android:layout_below="@+id/searchMed"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/MedSearchButton"
+                android:layout_marginTop="30dp"
+                android:textSize="10pt"
+                android:textColor="#000000"
+                android:text="purpose"
+                android:layout_alignEnd="@+id/when_using" />
+
+            <TextView
+                android:id="@+id/when_using"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10pt"
+                android:textColor="#000000"
+                android:layout_below="@+id/purpose"
+                android:layout_marginTop="30dp"
+                android:text="when_using" />
+
+            <TextView
+                android:id="@+id/indications_and_usage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/when_using"
+                android:layout_marginTop="30dp"
+                android:textSize="10pt"
+                android:textColor="#000000"
+                android:text="indications_and_usage" />
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="10pt"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:text="DOSAGE TABLE"
+                android:layout_below="@+id/indications_and_usage"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <WebView
+                android:id="@+id/dosage_and_administration_table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="10pt"
+                android:textColor="#FFFFFF"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/label"
+                android:layout_marginTop="10dp" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
