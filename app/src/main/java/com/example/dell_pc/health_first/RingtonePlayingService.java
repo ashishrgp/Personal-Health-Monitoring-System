@@ -30,6 +30,7 @@ public class RingtonePlayingService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
         Log.i("LocalService", "Received start id " + startId + ": " + intent);
 
         String state=intent.getExtras().getString("extra");
@@ -54,15 +55,16 @@ public class RingtonePlayingService extends Service {
 
         }
 
-        if(!this.isRunning && startId==1){
+        if(startId==1){
             media_song=MediaPlayer.create(this,R.raw.tone);
             media_song.start();
 
 
             NotificationManager notify_manager=(NotificationManager)getSystemService(NOTIFICATION_SERVICE);
-            Intent intent_main_activity=new Intent(this.getApplicationContext(),Alarm.class);
+            Intent intent_main_activity=new Intent(this.getApplicationContext(),Dialog.class);
             PendingIntent pending_intent_main_activity=PendingIntent.getActivity(this,0,intent_main_activity,0);
-
+            //Intent intenttodialog=new Intent(RingtonePlayingService.this,Dialog.class);
+            //startActivity(intenttodialog);
             Notification notification_popup= new Notification.Builder(this).
                     setContentTitle("Time to Take Medicine!").
                     setContentText("Medicine name: Crocin").
@@ -72,12 +74,8 @@ public class RingtonePlayingService extends Service {
             notify_manager.notify(0,notification_popup);
             this.isRunning=true;
             this.startId=0;
-        }
-        else if (this.isRunning && startId==0){
-            media_song.stop();
-            media_song.reset();
-            this.isRunning=false;
-            this.startId=0;
+
+
         }
         else if (!this.isRunning && startId==0){
             this.startId=0;

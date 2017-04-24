@@ -27,6 +27,7 @@ public class Alarm extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_alarm);
 
 //Extract the data…
@@ -55,9 +56,12 @@ public class Alarm extends AppCompatActivity {
 
 
                 my_intent.putExtra("extra","alarm on");
-                pending_intent=PendingIntent.getBroadcast(Alarm.this,0,my_intent,PendingIntent.FLAG_UPDATE_CURRENT);
+                pending_intent=PendingIntent.getBroadcast(context,0,my_intent,0);
                 alarm_manager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pending_intent);
                 set_alarm_text("Alarm On !!"+hour_string+":"+minute_string);
+
+
+
 
             }
         });
@@ -67,6 +71,8 @@ public class Alarm extends AppCompatActivity {
             public void onClick(View v) {
 
                 alarm_manager.cancel(pending_intent);
+                //pending_intent.cancel();
+
                 my_intent.putExtra("extra","alarm off");
                 sendBroadcast(my_intent);
                 end_alarm_text("Alarm Off !!");
