@@ -55,6 +55,8 @@
             android:name=".RingtonePlayingService"
             android:enabled="true" />
 
+        
+
     </application>
 
 </manifest>

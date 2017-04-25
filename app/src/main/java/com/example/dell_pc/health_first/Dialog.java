@@ -86,7 +86,9 @@ public class Dialog extends AppCompatActivity {
 
 // Setting Dialog Message
                         alertDialog3.setMessage("An Email has been sent to the Emergency Contact Listed ");
+                        onPause();
                         alertDialog3.setPositiveButton("Acknowledge",
+
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         // Write your code here to execute after dialog

@@ -112,9 +112,16 @@ public class HomeActivity extends AppCompatActivity{
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String fromEmail = "healthmanagement1234@gmail.com";
+                String fromPassword = "healthmanagement1234#";
+                String toEmails = "ashish_22@hotmail.com";
+                String emailSubject = "EMERGENCY";
+                String emailBody = "This is an emergency. Please advice the patient to take the medicine";
+                new SendMailTask(HomeActivity.this).execute(fromEmail,
+                        fromPassword, toEmails, emailSubject, emailBody);
 
-                Intent in = new Intent(HomeActivity.this, search.class);
-                startActivity(in);
+              //  Intent in = new Intent(HomeActivity.this, search.class);
+                //startActivity(in);
 
             }
         });

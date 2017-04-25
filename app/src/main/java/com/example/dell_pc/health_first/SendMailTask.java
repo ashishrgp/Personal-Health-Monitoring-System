@@ -25,13 +25,13 @@ public class SendMailTask extends AsyncTask {
         statusDialog.setMessage("Getting ready...");
         statusDialog.setIndeterminate(false);
         statusDialog.setCancelable(false);
-        statusDialog.show();
+//        statusDialog.show();
     }
 
     @SuppressWarnings("unchecked")
     @Override
     protected Object doInBackground(Object... args) {
-        try {
+            try {
             Log.i("SendMailTask", "About to instantiate GMail...");
             publishProgress("Processing input....");
             GMail androidEmail = new GMail(args[0].toString(),
