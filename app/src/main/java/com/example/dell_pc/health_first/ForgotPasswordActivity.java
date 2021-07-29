@@ -21,7 +21,6 @@ public class ForgotPasswordActivity extends Activity {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    // private String email = "ashish_22@hotmail.com";
     Button b1, b2, b3;
     EditText ed1;
 
